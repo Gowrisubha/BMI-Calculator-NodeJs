@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:500");
+
+body {
+    background: #ffecd9;
+    display: grid;
+    height: 100vh;
+    margin: 0;
+    place-items: center;
+    padding: 1rem;
+}
+
+button {
+    -webkit-appearance: none;
+    background: -webkit-gradient(to right, #a2ccb6 0%, #fceeb5 50%, #ee786e 100%);
+    background: linear-gradient(to right, #a2ccb6 0%, #fceeb5 50%, #ee786e 100%);
+    background-size: 500%;
+    border: none;
+    border-radius: 5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    color: #fff;
+    cursor: pointer;
+    font: 1.5em Raleway, 'Poppins';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    height: 5rem;
+    letter-spacing: 0.05em;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: 20rem;
+}
+
+button:hover {
+    animation-name: gradient;
+    -webkit-animation-name: gradient;
+    animation-duration: 2s;
+    -webkit-animation-duration: s;
+    animation-iteration-count: 1;
+    -webkit-animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 100%;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background: #eee;
+
+}
+
+body,
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    max-width: 1200px;
+    flex-direction: column;
+}
+
+.container h1 {
+    position: absolute;
+    top: 5%;
+    font-size: 2.5em;
+    color: #333;
+}
+
+.group {
+    width: 250px;
+    margin: 25px 0;
+    position: relative;
+}
+
+.group input {
+    width: 100%;
+    background: none;
+    border: none;
+    border-bottom: 3px solid #333;
+    padding: 5px 10px;
+    transition: border-color .4s ease;
+}
+
+.group input:focus,
+.group input:valid {
+    border-color: #2980b9;
+}
+
+.group input:focus+label,
+.group input:valid+label {
+    color: #2980b9;
+    transform: translate(-5px, -30px);
+    font-size: 14px;
+}
+
+.group label {
+    position: absolute;
+    left: 0;
+    margin-left: 10px;
+    transition: color .5s ease,
+        transform .5s ease,
+        font-size .5s ease;
+}
+
+.group input:focus:not(:valid) {
+    border-color: #e74c3c;
+}
+
+.group input:focus:not(:valid)+label {
+    color: #e74c3c;
+}
